@@ -1,6 +1,52 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 body{
-  margin: 0;
-  padding: 0;
+  font-family: Arial;
+}
+html,body {
+  overflow: auto;
+  height: 100%;
 }
 .container{
   width: 100%;
@@ -18,6 +64,8 @@ body{
   position: fixed;
   top: 0;
   right: 0;
+  overflow-y: auto;
+  height: 100%;
 }
 .menu ul::-webkit-scrollbar {
     display: none;
@@ -49,8 +97,11 @@ header{
 }
 #bar-1, #bar-2{
   min-height: 50px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   /*overflow: hidden;*/
+}
+#bar-2{
+  min-height: 70px;
 }
 #bar-1{
   background-color: #1AB394;
@@ -60,6 +111,8 @@ header{
   color: white;
   /*padding: 12px;*/
   font-size: 27px;
+  margin-left: 20px;
+  margin-top: 7px;
 }
 .search-wrapper{
   padding: 12px;
@@ -81,6 +134,7 @@ header{
 }
 .user-login{
   float: right;
+  margin-top: 5px;
 }
 .user-login ul li{
   color: white;
@@ -100,8 +154,150 @@ header{
   left: -8px;
 }
 .page-details{
-  /*float: left;*/
+  display: inline-block;
+}
+.page-name{
+  padding: 10px 0px 4px 18px;
+  color: #8B8B8B;
+}
+.breadcrumbs{
+  padding: 10px 0px 4px 18px;
+  color: #8B8B8B;
+  font-size: 12px;
 }
 .menu-options{
   float: right;
+  padding: 20px;
+  font-size: 25px;
+}
+.project-tabs{
+  width: 20%;
+  /*display: inline-block;*/
+  float: left;
+  /*border: 0.2px solid red;*/
+}
+.tab-detail{
+  float: right;
+  width: 80%;
+  /*border: 0.2px solid red;*/
+  display: inline-block;
+}
+.content{
+  padding: 20px 30px;
+  color: #444444;
+  /*opacity: 0.2;*/
+  border: 4px solid #F0F0F0;
+  margin: 5px 20px;
+  min-height: 550px;
+}
+.content-header{
+  overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 35px;
+}
+.project-title{
+  float: left;
+  width: 20%;
+}
+.submit-options{
+  float: right;
+  /*clear: both; */
+  width: 80%;
+  position: relative;
+}
+.content-detail{
+  /*border: 1px solid red;*/
+
+  overflow:auto;
+}
+.submit-project{
+  background-color: #1AB394;
+  color: #fff;
+  right: 60px;
+  position: absolute;
+  text-shadow:none;
+  border:none;
+  box-shadow:none;
+  padding: 8px;
+}
+.project-tabs ul{
+  margin-top: 45px;
+}
+.project-tabs ul li{
+  list-style: none;
+  padding: 12px 5px;
+}
+.selected-tab span{
+  background-color: #F0F0F0;
+  font-weight: bold;
+  /*height: 100%;*/
+  display: inline-block;
+  width: 70%;
+  padding: 10px 0px 10px 4px;
+  border-radius: 5px;
+}
+.settings{
+  display: inline;
+  right: 0;
+  position: absolute;
+}
+.tab-detail{
+  /*background-color: pink;*/
+  background-color: #F0F0F0;
+}
+.filling-progress{
+  padding: 15px;
+  background-color: #fff;
+}
+.filling-progress span{
+  width: 60%;
+  background-color: #FFC000;
+  display: inline-block;
+  height: 10px;
+  margin-left: 25px;
+}
+.tab-form{
+  overflow: hidden;
+  padding: 10px 15px;
+  min-height: 450px;
+}
+.tab-form .form-left{
+  float: left;
+  width: 50%;
+}
+.tab-form .form-right{
+  float: right;
+  width: 50%;
+}
+.form-field{
+  padding: 10px 0;
+}
+.form-field label{
+  display: inline-block;
+  width: 35%;
+  font-size: 15px;
+  color: #444444;
+}
+
+.form-field textarea, input, select{
+  width: 200px;
+  border: none;
+  padding: 10px 60px 10px 3px;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box;
+}
+.form-field input:focus, textarea:focus{
+  border: none;
+  border: 1px solid #1AB394;
+}
+.form-field textarea{
+  vertical-align: top;
+  resize: none;
+}
+footer .copyright{
+  font-size: 10px;
+  margin-left: 6px;
+  color: #444444;
 }
