@@ -78,33 +78,34 @@
                 <span></span>
               </div>
               <div class="tab-form">
-                <div class="form-left">
-                  <div class="form-field">
-                    <label for="project-name">Project Name*</label>
-                    <input type="text" id="project-name" name="project-name" placeholder="Project Name" required/>
+                <div style="display:none;" class="detail-form">
+                  <div class="form-left">
+                    <div class="form-field">
+                      <label for="project-name">Project Name*</label>
+                      <input type="text" id="project-name" name="project-name" placeholder="Project Name" required/>
+                    </div>
+                    <div class="form-field">
+                      <label for="project-description">Description*</label>
+                      <textarea id="project-description" name="project-description" rows="3" placeholder="Project Description" required></textarea>
+                    </div>
+                    <div class="form-field">
+                      <label for="project-priority">Priority*</label>
+                      <select id="project-priority">
+                        <option value="">HIGH priority</option>
+                        <option value="medium">MEDIUM priority</option>
+                        <option value="low">LOW priority</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label for="project-tags">Label</label>
+                      <textarea id="project-tags" name="project-tags" rows="3" placeholder="Project Tags" required></textarea>
+                    </div>
+                    <div class="form-field">
+                      <label for="project-version">Version*</label>
+                      <input type="text" id="project-version" name="project-version" placeholder="Project Version" required/>
+                    </div>
                   </div>
-                  <div class="form-field">
-                    <label for="project-description">Description*</label>
-                    <textarea id="project-description" name="project-description" rows="3" placeholder="Project Description" required></textarea>
-                  </div>
-                  <div class="form-field">
-                    <label for="project-priority">Priority*</label>
-                    <select id="project-priority">
-                      <option value="">HIGH priority</option>
-                      <option value="medium">MEDIUM priority</option>
-                      <option value="low">LOW priority</option>
-                    </select>
-                  </div>
-                  <div class="form-field">
-                    <label for="project-tags">Label</label>
-                    <textarea id="project-tags" name="project-tags" rows="3" placeholder="Project Tags" required></textarea>
-                  </div>
-                  <div class="form-field">
-                    <label for="project-version">Version*</label>
-                    <input type="text" id="project-version" name="project-version" placeholder="Project Version" required/>
-                  </div>
-                </div>
-                <div class="form-right">
+                  <div class="form-right">
                   <div class="form-field">
                     <label for="project-organization">Organization*</label>
                     <select id="project-organization">
@@ -114,15 +115,124 @@
                     </select>
                   </div>
                 </div>
+                </div>
+                <div style="display:none;" class="file-form">
+                  <div class="file-form-header">
+                    Add files to your project
+                  </div>
+                  <div class="file-upload">
+                    <button type="submit" class="file-upload-button">File UPLOAD</button>
+                  </div>
+                  <div class="directory">
+                    <div class="file-explorer">
+                      <ul>
+                        <li>Folder 1</li>
+                            <ul>
+                              <li>File 1</li>
+                              <li>File 2</li>
+                              <li>File 3</li>
+                            </ul>
+                        <li>Folder 2</li>
+                        <li>Folder 3</li>
+                      </ul>
+                    </div>
+                    <div class="file-window">
+                      <ul>
+                        <li>
+                          <i class="fa fa-2x fa-file" aria-hidden="true"></i>
+                          <span> Filename.ext </span>
+                        </li>
+                        <li>
+                          <i class="fa fa-2x fa-file" aria-hidden="true"></i>
+                          <span> Filename.ext </span>
+                        </li>
+                        <li>
+                          <i class="fa fa-2x fa-file" aria-hidden="true"></i>
+                          <span> Filename.ext </span>
+                        </li>
+                        <li>
+                          <i class="fa fa-2x fa-file" aria-hidden="true"></i>
+                          <span> Filename.ext </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="member-form">
+                  <div class="member-form-header"></div>
+                  <div class="member-details">
+                    <div class="assoc-member">
+                      <div class="search-member">
+                        <input type="text" name="search-member" id="search-member"/>
+                      </div>
+                      <ul>
+                        <li>
+                          <div><img align="middle" src="pic.png"/> Member Name</div>
+                        </li>
+                        <li>
+                          <div><img align="middle" src="pic.png"/> Member Name</div>
+                        </li>
+                        <li>
+                          <div><img align="middle" src="pic.png"/> Member Name</div>
+                        </li>
+                        <li>
+                          <div><img align="middle" src="pic.png"/> Member Name</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="member-list">
+                      <div class="mem-list-title">
+                        Result: 25 Users - Showing 7 of 25
+                      </div>
+                      <div class="mem-list-search">
+                        <i class="fa fa-x fa-trash" aria-hidden="true"></i>
+                        <input type="text" name="all-member-search" id="mem-search"/>
+                        <button type="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> ADD</button>
+                      </div>
+                      <div class="mem-list-header">
+                        <ul>
+                          <li>
+                            <input type="checkbox" value="0">
+                          </li>
+                          <li>
+                            Project
+                          </li>
+                          <li>
+                            User Status
+                          </li>
+                          <li>
+                            Membership
+                          </li>
+                        </ul>
+                      </div>
+                      <ul>
+                        <li>
+                          <input type="checkbox" value="0">
+                        </li>
+                        <li>
+                          Project
+                        </li>
+                        <li>
+                          User Status
+                        </li>
+                        <li>
+                          Membership
+                        </li>
+                      </ul>
+                      <div class="member-pagination"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <footer>
+        <!-- <footer>
           <div class="copyright">
             <b>Copyright</b> - Pervazive &copy; 2015-2016
           </div>
-        </footer>
+        </footer> -->
       </div>
     </div>
   </body>
